@@ -1,5 +1,5 @@
 # Hazem Ahmed React Project
-This is react version of project, vue version will be published soon ( i wish 😁)
+This is react version of project
 
 ## Features Developed
 1- Full Responsive
