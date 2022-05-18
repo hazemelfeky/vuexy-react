@@ -1,0 +1,53 @@
+@import '../../styles/varibles.scss';
+
+.selector{
+  position: relative;
+  &.active{
+    background-color: rgba(115,103,240,.2);
+  }
+  &:hover{
+    background-color: rgba(115,103,240,.05);
+  }
+  &__head{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 0.7rem 0.5rem 1rem ;
+    border: 1px solid $icons;
+    color: $icons;
+    border-radius: $border-radius;
+    cursor: pointer;
+    h3{
+      font-weight: normal;
+      user-select: none;
+      font-size: 1rem;
+    }
+  }
+  &__choices{
+    display: none;
+    position: absolute;
+    // bottom: -5px;
+    right: 0;
+    margin-top: 0.4rem;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+    padding: 0.4rem 0;
+    width: 10rem;
+    // height: 7.5rem;
+    background-color: #fff;
+    z-index: 5;
+    &.show{
+      display: block;
+    }
+
+    &__choice{
+      padding: 0.65rem 1.28rem;
+      user-select: none;
+      cursor: pointer;
+      &:hover{
+        background-color: rgba(115,103,240,.12);
+        color: $icons;
+      }
+    }
+  }
+}

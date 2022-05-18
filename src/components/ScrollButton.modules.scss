@@ -1,0 +1,12 @@
+@import '../styles/varibles.scss';
+
+.scroll{
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  padding: 1rem;
+  background-color: $icons;
+  border-radius: $border-radius;
+  color: $container--light;
+
+}

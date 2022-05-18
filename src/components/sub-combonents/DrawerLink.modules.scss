@@ -1,0 +1,75 @@
+@import '../../styles/varibles.scss';
+
+.drawer--link{
+  display: flex;
+  align-items: center;
+  margin: 0 0.6rem 0 1rem;
+  border-radius: $border-radius;
+
+  &.active{
+    background-color: $container--light;
+  }
+
+  &.super--active{
+    background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+    box-shadow: 0 0 10px 1px rgb(115 103 240 / 70%);
+    color: $container--light;
+    margin-top: 0.4rem;
+  }
+
+  &__container{
+    width: -webkit-fill-available;
+    a{
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      // margin: 0 15px;
+      padding: 10px 15px 10px 15px;
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      
+      .drawer--link__icon{
+        font-size: 1.45rem;
+        margin-right: 1.1rem;
+
+        &.circle{
+          font-size: 0.7rem;
+          width: 22.39px;
+        }
+      }
+      p{
+        height: 22.35px;
+      }
+    }
+    >:hover{
+      transform: translateX(8px);
+    }
+  }
+  .drawer--link__arrow{
+    font-size: 1rem;
+    margin-right: 0.6rem;
+    z-index: 5;
+  }
+}
+
+.drawer--sublinks__container{
+  // transition: 0.5s ease-in-out;
+  // transform: scaleY(0);
+  // transform-origin: top center;
+  display: none;
+
+  &.open{
+    display: block;
+    // transform: scaleY(1);
+  }
+}
+
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}

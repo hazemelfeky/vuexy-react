@@ -1,0 +1,128 @@
+@import '../../styles/varibles.scss';
+
+.product--row{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  overflow: hidden;
+  height: fit-content;
+
+  &:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 24px 0 rgb(34 41 47 / 25%);
+  }
+  &__left{
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+  }
+  &__center{
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+    &__name{
+      font-size: 14px;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.5s ease;
+      color: $text--light;
+      &:hover{
+        color: $icons;
+        cursor: pointer;
+      }
+    }
+    &__company{
+      text-transform: capitalize;
+      font-size: 12.25px;
+      font-weight: normal;
+      span{
+        color: $icons;
+        font-weight: bold;
+      }
+    }
+    &stars{
+      display: flex;
+    }
+    &__description{
+      font-size: 12.25px;
+      line-height: 1.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__right{
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #ccc;
+    &__price{
+      font-size: 1.286rem;
+      color: $icons;
+      font-weight: 500;
+    }
+    &>div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      h4{
+        font-weight: 600;
+      }
+    }
+    &__up{
+      padding: 0.786rem 1.5rem;
+      background-color: #f6f6f6;
+      &:hover{
+        background-color: #e3e3e3;
+      }
+      h4{
+        color: $text--light;
+      }
+    }
+    &__down{
+      color: #fff;
+      background-color: $icons;
+      padding: 0.786rem 0;
+      transition: all 0.2s ease;
+      &:hover{
+        box-shadow: 0 8px 25px -8px #7367f0;
+      }
+    }
+  }
+  @include breakpoint(sm){
+    display: flex;
+    flex-direction: column;
+
+    &__left {
+      padding: 1rem 0;
+      justify-content: center;
+      img {
+        width: auto;
+      }
+    }
+    &__right{
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import '../../styles/varibles.scss';
+
+.product{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  overflow: hidden;
+  height: fit-content;
+
+  &:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 24px 0 rgb(34 41 47 / 25%);
+  }
+  &__image{
+    min-height: 15.85rem;
+    display: flex;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+  }
+  &__details{
+    padding: 1rem;
+    width: 100%;
+    color: #6e6b7b;
+    &__numbers{
+      display: flex;
+      justify-content: space-between;
+
+      &__price{
+        font-weight: 600;
+      }
+    }
+    &__name{
+      font-weight: 600;
+      font-size: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 0.75rem;
+      transition: all 0.5s ease;
+      &:hover{
+        color: $icons;
+        cursor: pointer;
+      }
+    }
+
+    &__discription{
+      font-size: .875rem;
+      margin-top: 0.4rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__btns{
+    display: flex;
+    flex-direction: row;
+
+    @include breakpoint(xlg){
+      flex-direction: column;
+    }
+
+    @include breakpoint(md){
+      flex-direction: row;
+    }
+
+    @include breakpoint(sm){
+      flex-direction: column;
+    }
+
+    >div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      width: 50%;
+      h4{
+        font-weight: 600;
+      }
+      cursor: pointer;
+
+      @include breakpoint(xlg){
+        width: 100%;
+      }
+    }
+    &__up{
+      color: #2a2e30;
+      background-color: #f6f6f6;
+      padding: 0.786rem 0;
+      
+    }
+    &__down{
+      color: #fff;
+      background-color: $icons;
+      padding: 0.786rem 0;
+    }
+  }
+}

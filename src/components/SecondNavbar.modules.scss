@@ -1,0 +1,30 @@
+@import '../styles/varibles.scss';
+
+.second--nav{
+  margin: 2rem 0 2.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  &__left{
+    border-right: 1px solid #d6dce17a;
+    padding-right: 1rem;
+
+    h3{
+      font-weight: 500;
+      font-size: 24px;
+    }
+  }
+
+  &__right{
+    padding-left: 0.8rem;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+
+    a{
+      color: $icons !important;
+    }
+  }
+  
+}

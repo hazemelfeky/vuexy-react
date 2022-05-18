@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
+//font
+$font: 'Montserrat', sans-serif;
+
+//colors
+$text--light: #6e6b7b;
+$container--light: #F8F8F8;
+$comp--light: #FFFFFF;
+$text--dark: #d0d2d6;
+$container--dark: #161D31;
+$comp--dark: #283046;
+$icons: #7367f0;
+
+//numbers
+$drawer--width: 260px;
+$drawer--font: 15.4px;
+$border-radius: 6px;
+$main--font--size: 14px;
+
+@mixin breakpoint($point){
+  @if $point == xlg {
+    //1500px
+    @media (max-width: 1500px){
+      @content;
+    }
+  }
+  @if $point == lg {
+    //1200px
+    @media (max-width: 1200px){
+      @content;
+    }
+  }
+  @if $point == md {
+    //1000px
+    @media (max-width: 1000px){
+      @content;
+    }
+  }
+  @if $point == sm {
+    //768px
+    @media (max-width: 768px){
+      @content;
+    }
+  }
+  @if $point == xs {
+    // 480px
+    @media (max-width: 480px){
+      @content;
+    }
+  }
+}
