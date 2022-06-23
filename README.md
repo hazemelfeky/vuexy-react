@@ -1,4 +1,4 @@
-# Hazem Ahmed React Project
+# Vuexy React Project
 This is react version of project
 
 ## Features Developed
@@ -13,3 +13,5 @@ This is react version of project
 5- List Pagination
 
 6- Filters
+
+Link : https://elegant-selkie-4366fc.netlify.app/
